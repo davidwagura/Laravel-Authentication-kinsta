@@ -28,7 +28,16 @@ class LogoutController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials, $request->filled('remember'))) {
+            $request->session()->regenerate();
+
+            return redirect()->intended('/');
+        }
+        return back()->withErrors([
+            'email' => 'The provided credentians do not match our records.',
+        ]);
     }
 
     /**
