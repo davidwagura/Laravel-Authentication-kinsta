@@ -41,6 +41,12 @@
             <input type="password_confirmation" id="password_confirmation" name="password_confirmation" value="{{ old('password_confirmation') }}">
         </div>
         <div>
+            <label for="remeber">
+                <input type="checkbox" id="remember" name="remember">
+                <span class="">Remember Me</span>
+            </label>
+        </div>
+        <div>
             <button>Register</button>
         </div>
     </form>
