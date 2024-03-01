@@ -26,7 +26,7 @@
 
         <div>
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" value="{{ old('name') }} autofocus">
+            <input type="text" id="name" name="name" value="{{ old('name') }}" autofocus>
         </div>
         <div>
             <label for="email">Email</label>
